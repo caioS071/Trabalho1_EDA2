@@ -38,7 +38,7 @@ nomeDoarquivo = input()
 nomeDoarquivo = nomeDoarquivo + ".txt"
 
 #Leitura do arquivo .txt
-with open("Trabalho1_EDA2/Explícito com uso de ponteiros/" + nomeDoarquivo, "r") as arquivo:
+with open("Explícito com uso de ponteiros/" + nomeDoarquivo, "r") as arquivo:
 	texto = arquivo.readlines()
 
 #inicialização das listas e variavéis que serão utilizadas
@@ -60,10 +60,10 @@ while (cont<inteiros[0]):
 
 insertion(hashTable, point)
 
-with open("Trabalho1_EDA2/Explícito com uso de ponteiros/outputE.txt", "a") as arquivo:
+with open("Explícito com uso de ponteiros/outputE.txt", "a") as arquivo:
 	arquivo.write("HashTable: \n" + str(hashTable))
 
-with open("Trabalho1_EDA2/Explícito com uso de ponteiros/outputE.txt", "a") as arquivo:
+with open("Explícito com uso de ponteiros/outputE.txt", "a") as arquivo:
 	arquivo.write("\nApontadores: \n"+ str(point))
 
 
