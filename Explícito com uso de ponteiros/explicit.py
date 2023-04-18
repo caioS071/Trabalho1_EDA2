@@ -26,10 +26,9 @@ def insertion(hashTable, point):
 			#Mudar o apontador para a próxima posição livre do arquivo		
 			while (hashTable[posLivre] != "vazio"):
 				posLivre -=1
-
-		else:
-			print("arquivo cheio!")
-
+				if(posLivre<0):
+					print("arquivo cheio!")
+					break
 		qntInteiros +=1
 
 #-----------------------Função Principal-------------------------------
