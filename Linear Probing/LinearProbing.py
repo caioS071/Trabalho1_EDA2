@@ -29,7 +29,7 @@ nomeDoarquivo = input()
 nomeDoarquivo = nomeDoarquivo + ".txt"
 
 #Leitura do arquivo .txt
-with open("Trabalho1_EDA2/Explícito com uso de ponteiros/" + nomeDoarquivo, "r") as arquivo:
+with open("Linear Probing/" + nomeDoarquivo, "r") as arquivo:
 	texto = arquivo.readlines()
 
 #inicialização das listas e variavéis que serão utilizadas
