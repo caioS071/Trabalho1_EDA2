@@ -51,7 +51,7 @@ insertion(hashTable)
 with open("Linear Probing/outputLP.txt", "a") as arquivo:
 	arquivo.write("--Tabela Hashing utilizando Linear Probing --\n")
 
-with open("Trabalho1_EDA2/Linear Probing/outputLP.txt", "a") as arquivo:
+with open("Linear Probing/outputLP.txt", "a") as arquivo:
 	arquivo.write("HashTable: \n" + str(hashTable))
 
 
