@@ -59,7 +59,7 @@ while (cont<inteiros[0]):
 	
 
 insertion(hashTable, point)
-with open("Explícito com uso de ponteiros/outputLP.txt", "a") as arquivo:
+with open("Explícito com uso de ponteiros/outputE.txt", "a") as arquivo:
 	arquivo.write("--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --\n")
 	
 with open("Explícito com uso de ponteiros/outputE.txt", "a") as arquivo:
