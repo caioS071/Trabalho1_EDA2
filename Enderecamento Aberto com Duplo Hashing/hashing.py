@@ -1,55 +1,57 @@
-import os
+import math
+capacidadeArquivo = 11 
 
+def funcaoHash1(chave):
+	return chave % capacidadeArquivo
 
-class HashTable:
-    def __init__(self, size, file_path):
-        self.size = size
-        self.hash_table = [None] * self.size
-        self.file_path =  file_path
-        
-        if not os.path.exists(self.file_path):
-            open(self.file_path, "w").close()
-    
-    def hash_function_1(self, key):
-        return key % self.size
-    
-    def hash_function_2(self, key):
-        return 7 - (key % 7)
-    
-    def insert(self, key, value):
-        index = self.hash_function_1(key)
-        if self.hash_table[index] is None:
-            self.hash_table[index] = (key, value)
+def funcaoHash2(chave):
+	if chave >= capacidadeArquivo:
+		return math.floor(chave/capacidadeArquivo)
+	else:
+		return 1
+
+def insertion(hashTable, chaves):
+    posLivre = capacidadeArquivo 
+	
+    for i in chaves:
+        if(posLivre == 0):  
+            print("arquivo cheio!")
+            break
+
+        hash1 = funcaoHash1(i)
+        hash2 = funcaoHash2(i)
+
+        if(hashTable[hash1] == "vazio"):
+            hashTable[hash1] = i
         else:
-            i = 1
-            while True:
-                new_index = (self.hash_function_1(key) + i * self.hash_function_2(key)) % self.size
-                if self.hash_table[new_index] is None:
-                    self.hash_table[new_index] = (key, value)
-                    break
-                i += 1
-                
-        with open(self.file_path, "a") as f:
-            f.write(str(key) + "," + str(value) + "\n")
-                
-    def search(self, key):
-        index = self.hash_function_1(key)
-        if self.hash_table[index] is None:
-            return None
-        elif self.hash_table[index][0] == key:
-            return self.hash_table[index][1]
-        else:
-            i = 1
-            while True:
-                new_index = (self.hash_function_1(key) + i * self.hash_function_2(key)) % self.size
-                if self.hash_table[new_index] is None:
-                    return None
-                elif self.hash_table[new_index][0] == key:
-                    return self.hash_table[new_index][1]
-                i += 1
-    
-    def load_from_file(self):
-        with open(self.file_path, "r") as f:
-            for line in f:
-                key, value = line.strip().split(",")
-                self.insert(int(key), int(value))
+            while(hashTable[hash1] != "vazio"):
+                hash1 += hash2
+                if hash1 >= capacidadeArquivo:
+                    hash1 = hash1 - capacidadeArquivo
+            hashTable[hash1] = i
+	    
+        posLivre -= 1
+
+print("Insira o nome do arquivo .txt que será utilizado para efetuar o Hashing: ")
+nomeDoarquivo = input()
+nomeDoarquivo = nomeDoarquivo + ".txt"
+
+chaves = []
+hashTable = []
+
+with open("Enderecamento Aberto com Duplo Hashing/" + nomeDoarquivo, "r") as arquivo:
+	chaves = map(int,arquivo.readlines())
+	
+for i in range(capacidadeArquivo):
+	hashTable.append("vazio")
+
+insertion(hashTable, chaves)
+
+with open("Enderecamento Aberto com Duplo Hashing/outputDH.txt", "a") as arquivo:
+	arquivo.write("--Tabela Enderecamento aberto com Duplo Hashing --\n")
+	
+with open("Enderecamento Aberto com Duplo Hashing/outputDH.txt", "a") as arquivo:
+	arquivo.write("HashTable: \n" + str(hashTable))
+
+print("Tabela hashing após o processo:")
+print(hashTable)
