@@ -1,5 +1,21 @@
 import math
-capacidadeArquivo = 11 
+
+print("Insira o nome do arquivo .txt que será utilizado para efetuar o Hashing: ")
+nomeDoarquivo = input()
+nomeDoarquivo = nomeDoarquivo + ".txt"
+
+chaves = []
+hashTable = []
+
+with open("Enderecamento Aberto com Duplo Hashing/" + nomeDoarquivo, "r") as arquivo:
+	entrada = map(int,arquivo.readlines())
+	
+capacidadeArquivo = entrada[0]
+for i in range(1,len(entrada)):
+	chaves.append(entrada[i])
+
+for i in range(capacidadeArquivo):
+	hashTable.append("vazio")
 
 def funcaoHash1(chave):
 	return chave % capacidadeArquivo
@@ -31,19 +47,6 @@ def insertion(hashTable, chaves):
             hashTable[hash1] = i
 	    
         posLivre -= 1
-
-print("Insira o nome do arquivo .txt que será utilizado para efetuar o Hashing: ")
-nomeDoarquivo = input()
-nomeDoarquivo = nomeDoarquivo + ".txt"
-
-chaves = []
-hashTable = []
-
-with open("Enderecamento Aberto com Duplo Hashing/" + nomeDoarquivo, "r") as arquivo:
-	chaves = map(int,arquivo.readlines())
-	
-for i in range(capacidadeArquivo):
-	hashTable.append("vazio")
 
 insertion(hashTable, chaves)
 
