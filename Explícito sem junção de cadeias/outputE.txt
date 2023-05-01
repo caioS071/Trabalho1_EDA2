@@ -1,0 +1,33 @@
+--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+[11, 'vazio', 13, 'vazio', 'vazio', 16, 27, 31, 19, 10, 38]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 'vazio', 'vazio', 10, 'vazio', 6, 'vazio', 7, 9]--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+[11, 'vazio', 13, 'vazio', 'vazio', 16, 27, 38, 19, 31, 10]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 'vazio', 'vazio', 7, 'vazio', 6, 'vazio', 'vazio', 'vazio']--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+[30, 41, 'vazio', 'vazio', 4, 15, 26, 'vazio', 28, 18]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 'vazio', 'vazio', 'vazio', 'vazio', 'vazio', 9, 'vazio']--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+['vazio', 'vazio', 'vazio', 30, 15, 41, 28, 18, 19, 4, 26]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 'vazio', 10, 'vazio', 'vazio', 5, 2, 'vazio', 9]--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+['vazio', 'vazio', 'vazio', 30, 15, 41, 28, 18, 19, 4, 26]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 'vazio', 10, 'vazio', 'vazio', 5, 2, 'vazio', 9]--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+['vazio', 'vazio', 'vazio', 30, 15, 41, 28, 18, 19, 4, 26]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 'vazio', 10, 'vazio', 'vazio', 5, 3, 'vazio', 9]--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+['vazio', 'vazio', 'vazio', 30, 15, 41, 28, 18, 19, 4, 26]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 5, 10, 'vazio', 'vazio', 'vazio', 3, 'vazio', 9]--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+['vazio', 'vazio', 'vazio', 30, 15, 41, 28, 18, 19, 4, 26]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 5, 10, 'vazio', 'vazio', 'vazio', 3, 'vazio', 9]
