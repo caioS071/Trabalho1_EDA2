@@ -8,7 +8,7 @@ chaves = []
 hashTable = []
 
 with open("Enderecamento Aberto com Duplo Hashing/" + nomeDoarquivo, "r") as arquivo:
-	entrada = map(int,arquivo.readlines())
+	entrada = list(map(int,arquivo.readlines()))
 	
 capacidadeArquivo = entrada[0]
 for i in range(1,len(entrada)):
@@ -28,7 +28,8 @@ def funcaoHash2(chave):
 
 def insertion(hashTable, chaves):
     posLivre = capacidadeArquivo 
-	
+    numeroDeAcessos = 0
+
     for i in chaves:
         if(posLivre == 0):  
             print("arquivo cheio!")
@@ -39,16 +40,25 @@ def insertion(hashTable, chaves):
 
         if(hashTable[hash1] == "vazio"):
             hashTable[hash1] = i
+            numeroDeAcessos += 1
+            # print(numeroDeAcessos, i, hash1)
         else:
             while(hashTable[hash1] != "vazio"):
+                numeroDeAcessos += 1
+                # print(numeroDeAcessos, i, hash1)
                 hash1 += hash2
                 if hash1 >= capacidadeArquivo:
-                    hash1 = hash1 - capacidadeArquivo
+                    hash1 = hash1 - capacidadeArquivo  
+            numeroDeAcessos += 1    
+            # print(numeroDeAcessos, i, hash1)         
             hashTable[hash1] = i
 	    
         posLivre -= 1
+        # print(hashTable)
+	
+    return numeroDeAcessos
 
-insertion(hashTable, chaves)
+numeroDeAcessos = insertion(hashTable, chaves)
 
 with open("Enderecamento Aberto com Duplo Hashing/outputDH.txt", "a") as arquivo:
 	arquivo.write("--Tabela Enderecamento aberto com Duplo Hashing --\n")
@@ -58,3 +68,6 @@ with open("Enderecamento Aberto com Duplo Hashing/outputDH.txt", "a") as arquivo
 
 print("Tabela hashing após o processo:")
 print(hashTable)
+print("Media de acessos: " + str(numeroDeAcessos/len(chaves)))
+# print(numeroDeAcessos)
+# print(len(chaves))
