@@ -2,4 +2,30 @@
 HashTable: 
 [40, 'vazio', 'vazio', 43, 'vazio', 5, 'vazio', 27, 'vazio', 29, 'vazio', 49, 'vazio', 'vazio', 'vazio', 'vazio', 16, 77, 18, 'vazio']--Tabela Enderecamento aberto com Duplo Hashing --
 HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[27, 49, 18, 40, 77, 29, 5, 43, 16]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[27, 49, 18, 40, 77, 29, 5, 43, 16]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
+[77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]--Tabela Enderecamento aberto com Duplo Hashing --
+HashTable: 
 [77, 'vazio', 40, 49, 'vazio', 27, 16, 18, 5, 29, 43]

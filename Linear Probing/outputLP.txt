@@ -1,0 +1,3 @@
+--Tabela Hashing utilizando Linear Probing --
+HashTable: 
+[77, 49, 5, 'vazio', 'vazio', 27, 16, 18, 29, 40, 43]

@@ -1,0 +1,5 @@
+--Tabela Hashing Encadeamento explÍcito com o uso de ponteiros usando alocação estática de memória --
+HashTable: 
+[11, 'vazio', 13, 'vazio', 'vazio', 16, 27, 31, 19, 10, 38]
+Apontadores: 
+['vazio', 'vazio', 'vazio', 'vazio', 'vazio', 10, 'vazio', 6, 'vazio', 7, 9]
