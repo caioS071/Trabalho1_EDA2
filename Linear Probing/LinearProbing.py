@@ -10,14 +10,15 @@ def insertion(hashTable, contagem):
 		aux = int(inteiros[qntInteiros]%inteiros[0])
 		while (hashTable[aux] != "vazio"):
 			aux+=1
-			contagem+=1
-			if aux == inteiros[0]:
-				aux=0
-			
-			elif aux == int(inteiros[qntInteiros]%inteiros[0]) :
+
+			if aux == int(inteiros[qntInteiros]%inteiros[0]) :
 				print("arquivo cheio!")
 				qntInteiros = len(inteiros)
 				break
+
+			contagem+=1
+			if aux == inteiros[0]:
+				aux=0			
 			
 		if(hashTable[aux] == "vazio"):
 			hashTable[aux] = int(inteiros[qntInteiros])
