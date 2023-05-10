@@ -1,6 +1,6 @@
 
 #-----------------------Função de Inserção-------------------------------
-def insertion(hashTable):
+def insertion(hashTable, contagem):
 
 #Variavés de controle
 	qntInteiros = 1 
@@ -10,8 +10,9 @@ def insertion(hashTable):
 		aux = int(inteiros[qntInteiros]%inteiros[0])
 		while (hashTable[aux] != "vazio"):
 			aux+=1
+			contagem+=1
 			if aux == inteiros[0]:
-				aux=-1
+				aux=0
 			
 			elif aux == int(inteiros[qntInteiros]%inteiros[0]) :
 				print("arquivo cheio!")
@@ -20,7 +21,18 @@ def insertion(hashTable):
 			
 		if(hashTable[aux] == "vazio"):
 			hashTable[aux] = int(inteiros[qntInteiros])
+			contagem+=1
 			qntInteiros +=1	
+	
+	print("Tabela hashing após o processo:")
+	print(hashTable)
+	print("-----------------------------------------------------------------------")
+	print(contagem)
+	print("Média de acessos: ")
+	print(contagem/(len(inteiros)-1))
+
+
+
 
 #-----------------------Função Principal-------------------------------
 #Inserir o nome do .txt sem a extensão
@@ -36,6 +48,7 @@ with open("Linear Probing/" + nomeDoarquivo, "r") as arquivo:
 inteiros = []
 hashTable = []
 cont = 0
+contagem = 0
 
 #Criação de uma lista com os inteiros lidos do arquivo .txt
 for i in texto:
@@ -46,14 +59,11 @@ while (cont<inteiros[0]):
 	hashTable.append("vazio")
 	cont +=1
 	
-insertion(hashTable)
+insertion(hashTable, contagem)
 
 with open("Linear Probing/outputLP.txt", "a") as arquivo:
-	arquivo.write("--Tabela Hashing utilizando Linear Probing --\n")
+	arquivo.write("\n--Tabela Hashing utilizando Linear Probing --\n")
 
 with open("Linear Probing/outputLP.txt", "a") as arquivo:
 	arquivo.write("HashTable: \n" + str(hashTable))
 
-
-print("Tabela hashing após o processo:")
-print(hashTable)
