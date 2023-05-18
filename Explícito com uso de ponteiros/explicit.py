@@ -28,11 +28,11 @@ def insertion(hashTable, point, contagem):
 					aux = point[aux]
 					contagem+=1
 			#Mudar o apontador para a próxima posição livre do arquivo		
-			while (hashTable[posLivre] != "vazio"):
-				posLivre -=1
-				if(posLivre<0):
-					print("arquivo cheio!")
-					break
+		while (hashTable[posLivre] != "vazio"):
+			posLivre -=1
+			if(posLivre<0):
+				print("arquivo cheio!")
+				break
 		qntInteiros +=1
 	print("Tabela hashing após o processo:")
 	print(hashTable)
