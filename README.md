@@ -1,7 +1,7 @@
-Primeiro trabalho de EDA2 - Hashing
-Professor: George Marconi de Araujo Lima
-Matéria: MATA54 - ESTRUTURAS DE DADOS E ALGORITMOS II 
-Alunos: Caio Silva Pontes, Caio Miranda Pereira e Leonardo Tadeu Ferreira Santos Souza
+## Primeiro trabalho de EDA2 - Hashing
+* Professor: George Marconi de Araujo Lima
+* Matéria: MATA54 - ESTRUTURAS DE DADOS E ALGORITMOS II 
+* Alunos: Caio Silva Pontes, Caio Miranda Pereira e Leonardo Tadeu Ferreira Santos Souza
 
 ## Resumo do trabalho 
 
