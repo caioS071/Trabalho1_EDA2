@@ -43,6 +43,7 @@ def insertion(hashTable, chaves):
             numeroDeAcessos += 1
             # print(numeroDeAcessos, i, hash1)
         else:
+            impossivel = 0
             while(hashTable[hash1] != "vazio"):
                 numeroDeAcessos += 1
                 # print(numeroDeAcessos, i, hash1)
@@ -50,11 +51,16 @@ def insertion(hashTable, chaves):
                     hash2 = funcaoHash1(hash2)
                 hash1 += hash2
                 if(hash1 >= capacidadeArquivo):
-                    hash1 = funcaoHash1(hash1)
-            numeroDeAcessos += 1    
+                    hash1 = funcaoHash1(hash1)  
+                impossivel += 1
+                if(impossivel == 10):
+                    print("É impossível inserir o registro:", i)
+                    numeroDeAcessos -= 1
+                    break
+            numeroDeAcessos += 1
             # print(numeroDeAcessos, i, hash1)         
             hashTable[hash1] = i
-	    
+    
         posLivre -= 1
         print(numeroDeAcessos )
         # print(hashTable)
