@@ -53,7 +53,7 @@ def insertion(hashTable, chaves):
                 if(hash1 >= capacidadeArquivo):
                     hash1 = funcaoHash1(hash1)  
                 impossivel += 1
-                if(impossivel == 10):
+                if(impossivel == capacidadeArquivo):
                     print("É impossível inserir o registro:", i)
                     numeroDeAcessos -= 1
                     break
