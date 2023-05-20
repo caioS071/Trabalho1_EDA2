@@ -46,14 +46,17 @@ def insertion(hashTable, chaves):
             while(hashTable[hash1] != "vazio"):
                 numeroDeAcessos += 1
                 # print(numeroDeAcessos, i, hash1)
+                if hash2 >= capacidadeArquivo:
+                    hash2 = funcaoHash1(hash2)
                 hash1 += hash2
-                if hash1 >= capacidadeArquivo:
-                    hash1 = hash1 - capacidadeArquivo  
+                if(hash1 >= capacidadeArquivo):
+                    hash1 = funcaoHash1(hash1)
             numeroDeAcessos += 1    
             # print(numeroDeAcessos, i, hash1)         
             hashTable[hash1] = i
 	    
         posLivre -= 1
+        print(numeroDeAcessos )
         # print(hashTable)
 	
     return numeroDeAcessos
